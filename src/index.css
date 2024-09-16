@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app-container {
+    display: flex;
+    height: auto;
+    overflow: visible;
+    min-height: 100vh;
+  }
+  
+  .side-nav {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Initially hidden */
+    width: 350px;
+    height: 100%;
+    background: rgb(53, 53, 53);
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .side-nav.show {
+    left: 0; /* Slide in */
+  }
+  
+
+  
+  .main-content {
+    /* flex: 1; */
+    /* margin-left: 250px; Initial offset to accommodate the hidden nav */
+    width: 100vw;
+    transition: margin-left 0.3s ease;
+    /* min-height: 40rem; */
+    padding: 20px;
+    background-color: black;
+    color: white;
+  }
+  /* .mainRight{
+    margin-left: 300px;
+  } */
+
+  .notes-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto);
+    grid-gap: 1rem;
+  }
+
+
+
+
